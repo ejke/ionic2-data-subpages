@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar class="navbar-color">
+    <ion-title>
+      Minu varud
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content color="thirdly">
+  <ion-grid padding>
+    <ion-row class="pallikesed">
+      <ion-col width-10></ion-col>
+      <ion-col width-20><div class="emty-circle"></div></ion-col>
+      <ion-col width-20><div class="emty-circle"></div></ion-col>
+      <ion-col width-20><div class="emty-circle"></div></ion-col>
+      <ion-col width-20><div class="emty-circle"></div></ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+  </ion-grid>
+      <p color="subtext" class="text-middle font-23">Alusta varude kogumisega</p>
+        <p color="subtext" class="text-middle font-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+  <ion-list class="pallikesed">
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <img src="../../assets/instructions/ico-{{item.icon}}-small.png" item-left class="icon-size">
+      {{item.title}}
+      <div item-right class="fulfilled"></div>
+    </button>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-list-header>Follow us on Twitter</ion-list-header>
+    <ion-item>
+      <ion-icon name="ionic" item-left></ion-icon>
+      @ionicframework
+    </ion-item>
+  </ion-list>
+
+  <h2>Welcome to Ionic!</h2>
+  <p>
+    Take a look at the <code>src/pages/</code> directory to add or change tabs,
+    update any existing page or create new pages.
+  </p>
+
+  <h1>{{text}}</h1>
+  <h2>{{text}}</h2>
+  <h3>{{text}}</h3>
+  <h4>{{text}}</h4>
+  <h5>{{text}}</h5>
+  <h6>{{text}}</h6>
+  <p>{{text}}</p>
+
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Classes</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-icon item-left="" name="planet"></ion-icon>
+      <ion-label>Astronomy</ion-label>
+      <ion-note item-right="">To the moon</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon item-left="" name="body"></ion-icon>
+      <ion-label>Muggle Studies</ion-label>
+      <ion-toggle checked="false">
+        <button><span class="button-inner"></span><div class="button-effect"></div></button>
+      </ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-icon item-left="" name="leaf">
+      </ion-icon>
+      <ion-label>Herbology</ion-label>
+      <ion-icon color="secondary" item-right="" name="rose"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon item-left="" name="flask"></ion-icon>
+      <ion-label>Potions</ion-label>
+      <ion-note item-right="">Poisonous</ion-note>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

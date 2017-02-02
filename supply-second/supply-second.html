@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar class="navbar-color">
+    <ion-title *ngIf="selectedVarud">
+      {{selectedVarud.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content background="darkbeige">
+  <p text-center padding color="subtext" class="font-18"> Mida tähendab 7 päeva varu ja miks see olemas olema peaks. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut quam id risus commodo consequat eget a veliit.</p>
+  <p text-center padding color="subtext" class="font-18">NB! Kõik varud kehtivad inimese kohta.</p>
+
+  <ion-list>
+    <ion-list-header class="list-header-margin">Jook</ion-list-header>
+    <ion-item *ngFor="let supply of supplies | slice:0:1;">
+      <ion-label>{{supply.title}}</ion-label>
+      <ion-checkbox color="check" checked="false"></ion-checkbox>
+      <img item-right (click)="varudTapped($event, supply)" src="../../assets/instructions/ico-veeohutus-small.png" class="icon-size">
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header class="list-header-margin">Toit</ion-list-header>
+    <ion-item *ngFor="let supply of supplies | slice:1:6;">
+      <ion-label>{{supply.title}}</ion-label>
+      <ion-checkbox color="check" checked="false"></ion-checkbox>
+      <img item-right (click)="varudTapped($event, supply)" src="../../assets/instructions/ico-veeohutus-small.png" class="icon-size">
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header class="list-header-margin">Tervis</ion-list-header>
+    <ion-item *ngFor="let supply of supplies | slice:6:7;">
+      <ion-label>{{supply.title}}</ion-label>
+      <ion-checkbox color="check" checked="false"></ion-checkbox>
+      <img item-right (click)="varudTapped($event, supply)" src="../../assets/instructions/ico-veeohutus-small.png" class="icon-size">
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header class="list-header-margin">Tehnika</ion-list-header>
+    <ion-item *ngFor="let supply of supplies | slice:7:15;">
+      <ion-label>{{supply.title}}</ion-label>
+      <ion-checkbox color="check" checked="false"></ion-checkbox>
+      <img item-right (click)="varudTapped($event, supply)" src="../../assets/instructions/ico-veeohutus-small.png" class="icon-size">
+    </ion-item>
+  </ion-list>
+
+</ion-content>
